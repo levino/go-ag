@@ -37,16 +37,6 @@ Wenn Sie sich entscheiden, Ihr Kind online Go spielen zu lassen, empfehlen wir *
 
 Online-Go ist **eher für größere Kinder** geeignet, die bereits einen gewissen Umgang mit dem Internet beherrschen und verantwortungsvoll damit umgehen können.
 
-## Unsere Empfehlungen für den Umgang
-
-Falls Sie Ihrem Kind Online-Go erlauben möchten:
-
-1. **Zeitliche Begrenzung:** Vereinbaren Sie klare Zeiten (z.B. 2-3 Partien pro Woche)
-2. **Korrespondenzpartien bevorzugen:** Bei diesen macht man nur einen Zug pro Tag – das ist weniger bildschirmlastig als Live-Partien
-3. **AI-Review nutzen:** Die Lernfunktion nutzen, nicht nur spielen
-4. **Begleitung:** Gerade am Anfang gemeinsam spielen und die Plattform kennenlernen
-5. **Balance:** Online-Go als Ergänzung, nicht als Ersatz für das Spielen mit echten Menschen
-
 ## Teilnehmer:innen der Go-AG auf OGS
 
 Wenn Ihr Kind auf online-go.com angemeldet ist, kann es auch gegen andere Teilnehmer:innen der Go-AG spielen:
