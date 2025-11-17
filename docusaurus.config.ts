@@ -88,6 +88,10 @@ const config: Config = {
               label: 'Spielmaterial',
               to: '/spielmaterial',
             },
+            {
+              label: 'Online Go',
+              to: '/online-go',
+            },
           ],
         },
         {

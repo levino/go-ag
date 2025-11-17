@@ -82,6 +82,12 @@ Wenn Ihr Kind Go auch zuhause spielen möchte, finden Sie Empfehlungen auf der [
 
 **Wichtig:** Zu bedenken ist, dass die Kinder auch jemanden zum Spielen brauchen, der die Regeln versteht. Früher oder später können die Kinder aber auch selbst die Regeln erklären – das lernen sie in der Go-AG!
 
+### Online Go spielen
+
+Für größere Kinder, die ihre Spielstärke verbessern möchten, kann Online-Go eine sinnvolle Ergänzung sein. Wir haben dazu eine eigene Seite mit Informationen und Empfehlungen erstellt:
+
+**[Mehr zu Online-Go →](./online-go.md)**
+
 ## Ausflüge
 
 Langfristig sind auch Ausflüge geplant, wie der Besuch von Go-Turnieren, zum Beispiel beim **Messeturnier des Go Vereins in Hannover**.
