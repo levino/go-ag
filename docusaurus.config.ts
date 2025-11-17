@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Go-AG Freie Waldorfschule Hannover Maschsee',
-  tagline: 'Das japanische Brettspiel Go lernen und spielen',
+  tagline: 'Das ostasiatische Strategiespiel Go lernen und spielen',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

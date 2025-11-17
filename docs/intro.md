@@ -5,7 +5,7 @@ slug: /
 
 # Go-AG an der Freien Waldorfschule Hannover Maschsee
 
-Willkommen bei der Go-AG! Hier lernen wir das faszinierende japanische Brettspiel Go.
+Willkommen bei der Go-AG! Hier lernen wir das faszinierende Brettspiel Go (in China: Wéiqí, in Korea: Baduk).
 
 :::warning Wichtiger Hinweis
 
@@ -94,7 +94,13 @@ Langfristig sind auch Ausflüge geplant, wie der Besuch von Go-Turnieren, zum Be
 
 ## Was ist Go?
 
-Go ist ein über 2500 Jahre altes strategisches Brettspiel aus Ostasien. Es ist eines der komplexesten Brettspiele der Welt und fördert:
+Go ist ein über 2500 Jahre altes strategisches Brettspiel, das **ursprünglich aus China** stammt. Es ist heute in ganz Ostasien beliebt und trägt in verschiedenen Ländern unterschiedliche Namen:
+
+- **China:** Wéiqí (围棋) – "Umzingelungsspiel"
+- **Japan:** Go (碁)
+- **Korea:** Baduk (바둑)
+
+Go ist eines der komplexesten Brettspiele der Welt und fördert:
 - Strategisches Denken
 - Kreativität
 - Konzentration
