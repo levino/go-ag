@@ -34,6 +34,14 @@ Eingeladen sind:
 
 Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relativ schwach für einen Go-Spieler, sollte aber für die Inhalte der AG ausreichen.
 
+## Kosten
+
+Die Go-AG ist **grundsätzlich kostenlos**.
+
+Für die ausgeteilten Kopien von Go-Rätseln wird in unregelmäßigen Abständen ein **Kopiergeldbeitrag** erhoben. Bitte geben Sie Ihrem Kind dafür etwas Bargeld mit.
+
+Bei einer **festen Anmeldung** wird um einen **Startbeitrag von 10 Euro in bar** gebeten.
+
 ## Struktur der AG
 
 ### Im Mittelpunkt steht das Spielen! 🎯
@@ -45,6 +53,7 @@ Der Großteil der AG-Zeit ist zum **Spielen mit anderen Kindern und Teilnehmer:i
 Ergänzend zum freien Spielen:
 
 - **Go-Probleme (Rätsel)** werden ausgeteilt und die Lösungen gemeinsam besprochen
+  - Die Go-Probleme werden **individuell an die Spielstärke** der Teilnehmer:innen angepasst
 - **Yosekis** (Eröffnungsmuster) werden später studiert
 
 ### Lernziele
@@ -52,6 +61,12 @@ Ergänzend zum freien Spielen:
 - **Zunächst:** Die Spielregeln verstehen und regelkonform spielen können
 - **Dann:** Grundlegende Strategien für das Spiel auf dem 19×19 Brett erlernen
 - **Ziel:** Selbstständig spielen können!
+
+## Einstieg jederzeit möglich
+
+Ein **Einstieg ist jederzeit möglich** – Sie können einfach vorbeikommen!
+
+Wir erklären Neulingen gerne die Regeln und helfen beim Einstieg. Die Go-Probleme passen wir individuell an die Spielstärke an, sodass jede:r auf dem passenden Niveau lernen kann.
 
 ## Für Eltern
 
