@@ -36,12 +36,22 @@ Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relati
 
 ## Struktur der AG
 
-Die AG ist so strukturiert, dass viel Zeit zum Spielen mit anderen Kindern und Teilnehmer:innen eingeräumt wird. Darüber hinaus:
+### Im Mittelpunkt steht das Spielen! 🎯
 
-- **Go-Probleme (Rätsel)** werden ausgeteilt und die Lösungen besprochen
+Der Großteil der AG-Zeit ist zum **Spielen mit anderen Kindern und Teilnehmer:innen** reserviert. Go lernt man am besten durch Spielen!
+
+### Zusätzliche Lerninhalte
+
+Ergänzend zum freien Spielen:
+
+- **Go-Probleme (Rätsel)** werden ausgeteilt und die Lösungen gemeinsam besprochen
 - **Yosekis** (Eröffnungsmuster) werden später studiert
-- **Ziel:** Die Kinder sollen zunächst befähigt werden, Go den Spielregeln konform zu spielen
-- **Fortgeschritten:** Grundlegende Strategien für das Spiel auf dem 19×19 Brett verstehen und selbstständig spielen können
+
+### Lernziele
+
+- **Zunächst:** Die Spielregeln verstehen und regelkonform spielen können
+- **Dann:** Grundlegende Strategien für das Spiel auf dem 19×19 Brett erlernen
+- **Ziel:** Selbstständig spielen können!
 
 ## Für Eltern
 
