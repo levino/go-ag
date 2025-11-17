@@ -32,7 +32,7 @@ Eingeladen sind:
 
 ## Leitung
 
-Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relativ schwach für einen Go-Spieler, sollte aber für die Inhalte der AG ausreichen.
+Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relativ schwach für einen Go-Lehrer, sollte aber für die Inhalte der AG ausreichen.
 
 ## Kosten
 
