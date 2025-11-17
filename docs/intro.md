@@ -68,6 +68,12 @@ Ein **Einstieg ist jederzeit möglich** – Sie können einfach vorbeikommen!
 
 Wir erklären Neulingen gerne die Regeln und helfen beim Einstieg. Die Go-Probleme passen wir individuell an die Spielstärke an, sodass jede:r auf dem passenden Niveau lernen kann.
 
+### Spielmaterial
+
+**Genügend Spielmaterial (Bretter und Steine) ist vorhanden** – die Teilnehmer:innen müssen nichts mitbringen!
+
+Für die Go-Rätsel erhält jede:r früher oder später eine eigene Mappe, in der die Rätsel gesammelt werden können.
+
 ## Für Eltern
 
 ### Mailverteiler
