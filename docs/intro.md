@@ -38,7 +38,7 @@ Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relati
 
 Die Go-AG ist **grundsätzlich kostenlos**.
 
-Für die ausgeteilten Kopien von Go-Rätseln wird in unregelmäßigen Abständen ein **Kopiergeldbeitrag** erhoben. Bitte gib Deinem Kind dafür etwas Bargeld mit.
+Für die ausgeteilten Kopien von Go-Rätseln wird in unregelmäßigen Abständen und je nach persönlichem Verbrauch an Go-Problemen ein **Kopiergeldbeitrag** erhoben.
 
 Bei einer **festen Anmeldung** wird um einen **Startbeitrag von 10 Euro in bar** gebeten.
 
