@@ -38,7 +38,7 @@ Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relati
 
 Die Go-AG ist **grundsätzlich kostenlos**.
 
-Für die ausgeteilten Kopien von Go-Rätseln wird in unregelmäßigen Abständen ein **Kopiergeldbeitrag** erhoben. Bitte geben Sie Ihrem Kind dafür etwas Bargeld mit.
+Für die ausgeteilten Kopien von Go-Rätseln wird in unregelmäßigen Abständen ein **Kopiergeldbeitrag** erhoben. Bitte gib Deinem Kind dafür etwas Bargeld mit.
 
 Bei einer **festen Anmeldung** wird um einen **Startbeitrag von 10 Euro in bar** gebeten.
 
@@ -64,7 +64,7 @@ Ergänzend zum freien Spielen:
 
 ## Einstieg jederzeit möglich
 
-Ein **Einstieg ist jederzeit möglich** – Sie können einfach vorbeikommen!
+Ein **Einstieg ist jederzeit möglich** – Du kannst einfach vorbeikommen!
 
 Wir erklären Neulingen gerne die Regeln und helfen beim Einstieg. Die Go-Probleme passen wir individuell an die Spielstärke an, sodass jede:r auf dem passenden Niveau lernen kann.
 
@@ -84,13 +84,13 @@ Es gibt einen Mailverteiler für aktuelle Informationen oder kurzfristige Absage
 
 ### Spielmaterial für Zuhause
 
-Wenn Ihr Kind Go auch zuhause spielen möchte, finden Sie Empfehlungen auf der [Spielmaterial-Seite](./spielmaterial.md).
+Wenn Dein Kind Go auch zuhause spielen möchte, findest Du Empfehlungen auf der [Spielmaterial-Seite](./spielmaterial.md).
 
 **Wichtig:** Zu bedenken ist, dass die Kinder auch jemanden zum Spielen brauchen, der die Regeln versteht. Früher oder später können die Kinder aber auch selbst die Regeln erklären – das lernen sie in der Go-AG!
 
 ### Online Go spielen
 
-Für größere Kinder, die ihre Spielstärke verbessern möchten, kann Online-Go eine sinnvolle Ergänzung sein. Wir haben dazu eine eigene Seite mit Informationen und Empfehlungen erstellt:
+Für ältere Kinder, die ihre Spielstärke verbessern möchten, kann Online-Go eine sinnvolle Ergänzung sein. Wir haben dazu eine eigene Seite mit Informationen und Empfehlungen erstellt:
 
 **[Mehr zu Online-Go →](./online-go.md)**
 

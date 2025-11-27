@@ -10,7 +10,7 @@ Hohenzollerndamm 152
 
 ## Kontakt
 
-Für Fragen zur Go-AG wenden Sie sich bitte an Levin Keller über den [Mailverteiler der AG](https://lists.levinkeller.de/mailman/listinfo/go-ag_lists.levinkeller.de).
+Für Fragen zur Go-AG wende Dich bitte an Levin Keller über den [Mailverteiler der AG](https://lists.levinkeller.de/mailman/listinfo/go-ag_lists.levinkeller.de).
 
 ## Haftungsausschluss
 

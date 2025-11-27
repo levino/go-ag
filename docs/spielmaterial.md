@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Spielmaterial
 
-Wenn Ihr Kind Go auch zuhause spielen möchte, finden Sie hier Empfehlungen für Spielmaterial.
+Wenn Dein Kind Go auch zuhause spielen möchte, findest Du hier Empfehlungen für Spielmaterial.
 
 ## Wo kaufen?
 

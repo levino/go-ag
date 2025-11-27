@@ -22,7 +22,7 @@ Dies alles lässt sich durch Online-Plattformen erreichen.
 
 ## Empfehlung: Online-Go.com
 
-Wenn Sie sich entscheiden, Ihr Kind online Go spielen zu lassen, empfehlen wir **[online-go.com](https://online-go.com/)** (auch bekannt als OGS).
+Wenn Du Dich entscheidest, Dein Kind online Go spielen zu lassen, empfehlen wir **[online-go.com](https://online-go.com/)** (auch bekannt als OGS).
 
 ### Vorteile von OGS:
 
@@ -35,15 +35,15 @@ Wenn Sie sich entscheiden, Ihr Kind online Go spielen zu lassen, empfehlen wir *
 
 ### Für wen geeignet?
 
-Online-Go ist **eher für größere Kinder** geeignet, die bereits einen gewissen Umgang mit dem Internet beherrschen und verantwortungsvoll damit umgehen können.
+Online-Go ist **eher für ältere Kinder** geeignet, die bereits einen gewissen Umgang mit dem Internet beherrschen und verantwortungsvoll damit umgehen können.
 
 ## Teilnehmer:innen der Go-AG auf OGS
 
-Wenn Ihr Kind auf online-go.com angemeldet ist, kann es auch gegen andere Teilnehmer:innen der Go-AG spielen:
+Wenn Dein Kind auf online-go.com angemeldet ist, kann es auch gegen andere Teilnehmer:innen der Go-AG spielen:
 
 - **Levin Keller (AG-Leitung):** [levino](https://online-go.com/player/207078/) (8 Kyu)
 
-*Wenn Ihr Kind auch auf OGS spielt, können wir die Liste gerne erweitern. Schreiben Sie einfach an den [Mailverteiler](https://lists.levinkeller.de/mailman/listinfo/go-ag_lists.levinkeller.de).*
+*Wenn Dein Kind auch auf OGS spielt, können wir die Liste gerne erweitern. Schreib einfach an den [Mailverteiler](https://lists.levinkeller.de/mailman/listinfo/go-ag_lists.levinkeller.de).*
 
 ## Fazit
 
