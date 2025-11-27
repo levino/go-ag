@@ -104,7 +104,7 @@ Go ist ein über 2500 Jahre altes strategisches Brettspiel, das **ursprünglich 
 
 - **China:** Wéiqí (围棋) – "Umzingelungsspiel"
 - **Japan:** Go (碁)
-- **Korea:** Baduk (바둑)
+- **Korea:** Baduk
 
 Go ist eines der komplexesten Brettspiele der Welt und fördert:
 - Strategisches Denken
