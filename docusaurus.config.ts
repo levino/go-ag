@@ -42,7 +42,7 @@ const config: Config = {
         docs: {
           routeBasePath: '/', // Docs-only mode
           sidebarPath: './sidebars.ts',
-          editUrl: undefined, // Remove edit this page links
+          editUrl: 'https://github.com/levino/go-ag/edit/main/',
         },
         blog: false, // Disable blog
         theme: {
