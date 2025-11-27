@@ -17,8 +17,8 @@ Die AG ist offiziell mit der Schule abgestimmt und Levin Keller erfüllt die ges
 
 ## Zeit und Ort
 
-- **Wann:** Montags, 14:00 - 16:00 Uhr
-- **Wo:** Blauer Saal, Freie Waldorfschule Hannover Maschsee
+- **Wann:** Mittwochs, 14:00 - 16:00 Uhr
+- **Wo:** Schulbibliothek, Freie Waldorfschule Hannover Maschsee
 
 ## Für wen ist die AG?
 
