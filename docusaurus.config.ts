@@ -35,6 +35,10 @@ const config: Config = {
     locales: ['de'],
   },
 
+  plugins: [
+    require.resolve('./plugins/docusaurus-typst'),
+  ],
+
   presets: [
     [
       'classic',
@@ -91,6 +95,10 @@ const config: Config = {
             {
               label: 'Online Go',
               to: '/online-go',
+            },
+            {
+              label: 'Partieprotokoll',
+              to: '/kifu',
             },
           ],
         },
