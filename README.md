@@ -43,6 +43,23 @@ Die Seite wird auf **Cloudflare Pages** gehostet und automatisch bei jedem Push 
 - **Spielmaterial** (`docs/spielmaterial.md`): Empfehlungen für Go-Spielmaterial
 - **Impressum** (`src/pages/impressum.md`): Rechtliche Informationen
 
+## Typst-PDFs & Schriften
+
+`.typ`-Dateien (z. B. `flyer.typ`, `kifu*.typ`) werden beim Build über den
+Typst-Loader (`plugins/docusaurus-typst/`) zu PDF gerendert.
+
+Damit Emojis auf jedem Build-Host farbig rendern (statt als leere Kästchen),
+liegt im Ordner `fonts/` ein **Subset von Noto Color Emoji**
+(`NotoColorEmoji-subset.ttf`). Der Loader übergibt diesen Ordner per
+`--font-path` an Typst. Wird im Flyer ein neues Emoji verwendet, muss das
+Subset entsprechend erweitert werden, z. B.:
+
+```bash
+pyftsubset /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf \
+  --unicodes=1F4C5,1F4CD,1F44B,1F193,1F64C,1F4F1,1F389,2728,1F3C6,1F388 \
+  --output-file=fonts/NotoColorEmoji-subset.ttf
+```
+
 ## Lizenz
 
 Siehe [LICENSE](LICENSE) Datei.

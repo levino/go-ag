@@ -1,40 +1,33 @@
 // Info-Flyer / Aushang (DIN A4) — Go-AG Freie Waldorfschule Hannover Maschsee
-// Plakativ gehalten zum Aufkleben/Aushängen beim Sommerfest zur 100-Jahr-Feier.
-// Bewusst OHNE Emojis (rendern je nach System als leere Kästchen) — alle Symbole
-// sind gezeichnete Vektor-Formen.
+// Plakativ zum Aufkleben/Aushängen beim Sommerfest zur 100-Jahr-Feier.
+//
+// Emojis: Es werden ausschließlich Emojis verwendet, die im mitgelieferten
+// Subset-Font (../fonts/NotoColorEmoji-subset.ttf) enthalten sind. Dadurch
+// rendern sie auf JEDEM Build-Host farbig — unabhängig von Systemschriften,
+// also keine leeren Kästchen ("Tofu"). Der Font-Pfad wird vom Typst-Loader
+// (plugins/docusaurus-typst/loader.js) per --font-path gesetzt.
+// Enthaltene Emojis: 📅 📍 👋 🆓 🙌 📱 🎉 ✨ 🏆 🎈
+// -> Beim Hinzufügen weiterer Emojis das Subset in fonts/ entsprechend erweitern!
 
 #import "@preview/cetz:0.3.4"
 #import "@preview/tiaoma:0.3.0"
 
 // ── Farben & Stil ───────────────────────────────────────────────────────────
-#let ink        = luma(15%)            // Schrift
-#let green-dark = rgb("#3f6b4f")       // Go-Grün, kräftig
-#let green-soft = rgb("#e7f0e9")       // Go-Grün, sehr hell (Flächen)
-#let gold       = rgb("#c2982f")       // warmer Akzent (Waldorf / 100 Jahre)
+#let ink        = luma(15%)
+#let green-dark = rgb("#3f6b4f")
+#let green-soft = rgb("#e7f0e9")
+#let gold       = rgb("#c2982f")
 #let line-col   = green-dark.mix((white, 35%))
 
 #set text(fill: ink, font: "Liberation Sans", size: 12pt, lang: "de")
-#set page(
-  "a4",
-  margin: (x: 16mm, top: 15mm, bottom: 13mm),
-  footer: none,
-)
+#set page("a4", margin: (x: 16mm, top: 15mm, bottom: 13mm), footer: none)
 
-// Go-Stein als Aufzählungs-Symbol (gezeichnet, keine Schrift/Emoji nötig)
-#let stein(fill: green-dark, d: 9pt) = box(
-  baseline: 0.18 * d,
-  circle(radius: d / 2, fill: fill, stroke: none),
-)
-
-// ── Goban-Illustration ──────────────────────────────────────────────────────
-// stones: Liste von (spalte, reihe, "b"/"w")  (1-basiert)
+// ── Goban-Illustration (gezeichnet) ─────────────────────────────────────────
 #let goban(n: 9, stones: (), size: 46mm) = cetz.canvas(length: size / (n - 1), {
   import cetz.draw: *
   let lw = (paint: green-dark.mix((white, 25%)), thickness: 0.5pt)
-  rect(
-    (-1.1, -1.1), (n - 1 + 1.1, n - 1 + 1.1),
-    fill: rgb("#f3e7c9"), stroke: (paint: gold, thickness: 1.2pt), radius: 0.18,
-  )
+  rect((-1.1, -1.1), (n - 1 + 1.1, n - 1 + 1.1),
+    fill: rgb("#f3e7c9"), stroke: (paint: gold, thickness: 1.2pt), radius: 0.18)
   for i in range(n) {
     line((0, i), (n - 1, i), stroke: lw)
     line((i, 0), (i, n - 1), stroke: lw)
@@ -63,7 +56,7 @@
 
 // ── Kopf ────────────────────────────────────────────────────────────────────
 #align(center, text(fill: gold, weight: "bold", size: 12pt, tracking: 1.5pt)[
-  SOMMERFEST · 100-JAHR-FEIER · WALDORFSCHULE MASCHSEE
+  🎉 SOMMERFEST · 100-JAHR-FEIER · WALDORFSCHULE MASCHSEE 🎉
 ])
 
 #v(6mm)
@@ -72,9 +65,7 @@
   columns: (1fr, auto),
   column-gutter: 8mm,
   align: (left + horizon, center + horizon),
-  [
-    #text(fill: green-dark, size: 52pt, weight: "bold")[Spiel mit\ uns Go!]
-  ],
+  text(fill: green-dark, size: 52pt, weight: "bold")[Spiel mit\ uns Go! ✨],
   goban(n: 9, stones: stellung, size: 54mm),
 )
 
@@ -91,33 +82,34 @@
   #set par(leading: 0.45em)
   #grid(
     columns: (auto, 1fr),
-    column-gutter: 8mm,
+    column-gutter: 7mm,
     row-gutter: 7mm,
-    align: (right + horizon, left + horizon),
-    text(fill: gold, weight: "bold", size: 17pt)[WANN],
+    align: (center + horizon, left + horizon),
+    text(size: 34pt)[📅],
     text(fill: green-dark, weight: "bold", size: 33pt)[Jeden Mittwoch\ #text(size: 38pt)[14 – 16 Uhr]],
-    text(fill: gold, weight: "bold", size: 17pt)[WO],
+    text(size: 34pt)[📍],
     text(fill: green-dark, weight: "bold", size: 33pt)[Schulbibliothek],
   )
 ]
 
 #v(8mm)
 
-// ── Wenige, große Kernpunkte ────────────────────────────────────────────────
+// ── Wenige, große Kernpunkte (mit Emoji als Aufzählungssymbol) ──────────────
 #set par(leading: 0.6em)
-#let punkt(body) = grid(
+#let punkt(sym, body) = grid(
   columns: (auto, 1fr),
   column-gutter: 4mm,
   align: (center + horizon, left + horizon),
-  stein(),
+  text(size: 22pt)[#sym],
   text(size: 19pt, weight: "bold", fill: ink)[#body],
 )
 
 #stack(
   spacing: 6mm,
-  punkt[Komm einfach vorbei — *jede:r* ist willkommen!],
-  punkt[*Kostenlos*, kein Vorwissen nötig, Material ist da.],
-  punkt[Schüler:innen aller Klassen, Lehrer:innen & Eltern.],
+  punkt[👋][Komm einfach vorbei — *jede:r* ist willkommen!],
+  punkt[🆓][*Kostenlos*, kein Vorwissen nötig, Material ist da.],
+  punkt[🙌][Schüler:innen aller Klassen, Lehrer:innen & Eltern.],
+  punkt[🏆][Wir spielen, lernen — und besuchen Go-Turniere.],
 )
 
 #v(1fr)
@@ -136,7 +128,7 @@
     tiaoma.qrcode("https://go-ag.levinkeller.de", options: (scale: 2.8)),
   ),
   [
-    #text(fill: green-dark, size: 17pt, weight: "bold")[Alle Infos & Termine:]\
+    #text(fill: green-dark, size: 17pt, weight: "bold")[📱 Alle Infos & Termine:]\
     #v(1mm)
     #text(size: 22pt, weight: "bold")[#link("https://go-ag.levinkeller.de")[go-ag.levinkeller.de]]
   ],
