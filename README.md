@@ -48,17 +48,35 @@ Die Seite wird auf **Cloudflare Pages** gehostet und automatisch bei jedem Push 
 `.typ`-Dateien (z. B. `flyer.typ`, `kifu*.typ`) werden beim Build über den
 Typst-Loader (`plugins/docusaurus-typst/`) zu PDF gerendert.
 
-Damit Emojis auf jedem Build-Host farbig rendern (statt als leere Kästchen),
-liegt im Ordner `fonts/` ein **Subset von Noto Color Emoji**
-(`NotoColorEmoji-subset.ttf`). Der Loader übergibt diesen Ordner per
-`--font-path` an Typst. Wird im Flyer ein neues Emoji verwendet, muss das
-Subset entsprechend erweitert werden, z. B.:
+Damit das Rendern auf jedem Build-Host **identisch und ohne fehlende Glyphen**
+(„Tofu"-Kästchen) funktioniert, liegen alle benötigten Schriften im Ordner
+`fonts/` und werden vom Loader per `--font-path` an Typst übergeben:
+
+| Schrift | Verwendung | Dateien |
+| --- | --- | --- |
+| **Caveat** | Handschrift (Überschriften, Termin) | `Caveat-Regular/-Bold.ttf` |
+| **Andada Pro** | Fließtext (erdiger Serif) | `AndadaPro-Regular/-Bold.ttf` |
+| **Noto Color Emoji** (Subset) | farbige Emojis | `NotoColorEmoji-subset.ttf` |
+
+Caveat und Andada Pro sind statische Instanzen der jeweiligen Variable-Fonts
+(Typst unterstützt keine Variable-Fonts), erzeugt mit:
+
+```bash
+python3 -m fontTools.varLib.instancer Caveat[wght].ttf wght=700 -o fonts/Caveat-Bold.ttf
+```
+
+Der Emoji-Font ist ein Subset (nur die genutzten Emojis 📅 📍 👋 🆓 🙌 📱 🎉 ✨
+🏆 🎈). Wird ein neues Emoji verwendet, das Subset erweitern:
 
 ```bash
 pyftsubset /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf \
   --unicodes=1F4C5,1F4CD,1F44B,1F193,1F64C,1F4F1,1F389,2728,1F3C6,1F388 \
   --output-file=fonts/NotoColorEmoji-subset.ttf
 ```
+
+> Tipp: Mit `typst compile --ignore-system-fonts --font-path fonts flyer.typ`
+> lässt sich ein „nackter" Build-Host simulieren — so fallen fehlende Glyphen
+> sofort auf.
 
 ## Lizenz
 
