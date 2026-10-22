@@ -1,6 +1,6 @@
 // Partieprotokoll 9×9 – Go/Baduk/Weiqi
 
-#import "@preview/cetz:0.3.4"
+#import "@preview/cetz:0.5.3"
 #import "@preview/showybox:2.0.4": showybox
 
 #let lw          = 0.2mm
