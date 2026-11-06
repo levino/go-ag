@@ -1,0 +1,6 @@
+# Cloudflare Pages Redirects
+#
+# /zeit ist die Kurz-URL hinter dem QR-Code auf dem Flyer (flyer/).
+# Ziel durch die Umfrage auf umfragen.levinkeller.de ersetzen, sobald sie angelegt ist.
+# Bis dahin landet man auf der Startseite statt auf einer 404.
+/zeit  /  302
