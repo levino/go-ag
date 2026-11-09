@@ -16,5 +16,5 @@ Debian: `fonts-crosextra-carlito fonts-ipafont-gothic`):
 typst compile flyer/flyer.typ flyer/go-ag-flyer-a4.pdf
 ```
 
-Die Zitate auf der Rückseite sind am Volltext des Rudolf Steiner Online Archivs
+Das Steiner-Zitat auf der Rückseite ist am Volltext des Rudolf Steiner Online Archivs
 (anthroposophie.byu.edu) geprüft; die Quellen stehen im Kopf von `flyer.typ`.

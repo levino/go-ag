@@ -5,14 +5,12 @@
 //
 //   typst compile flyer/flyer.typ flyer/go-ag-flyer-a4.pdf
 //
-// Quellen der Zitate (Rudolf Steiner Online Archiv, anthroposophie.byu.edu):
-//   GA 294, 1. Vortrag, Stuttgart 21.8.1919  – Summe zuerst, dann Addenden
-//   GA 301, 10. Vortrag, Basel 5.5.1920      – Analysieren als „völlig freie innere Tätigkeit“
-//   GA 301, 5. Vortrag, Basel 26.4.1920      – Finger und „biegsame Gedanken“
-//   GA 294, 7. Vortrag, Stuttgart 28.8.1919  – Schillers ästhetische Briefe
-//   Schiller, Über die ästhetische Erziehung des Menschen, 15. Brief
-//   GA 4, Die Philosophie der Freiheit, Kap. III („Ausnahmezustand“) und Kap. IX
-//   GA 24, „Freie Schule und Dreigliederung“ (1919), S. 37
+// Quellen:
+//   Steiner-Zitat: GA 301, 5. Vortrag, Basel 26.4.1920 (Rudolf Steiner Online Archiv,
+//     anthroposophie.byu.edu/files/2025/06/301.pdf)
+//   手談 als Beiname des Go: Shishuo xinyu; weiße Steine aus Hamaguri-Muschel, schwarze aus
+//     Nachiguro-Schiefer (ja.wikipedia „碁石“)
+//   Patenschaften an Waldorfschulen: Bund der Freien Waldorfschulen, waldorfschule.de
 
 #import "@preview/tiaoma:0.3.0": qrcode
 
@@ -193,32 +191,24 @@
 #at(edge, bleed + safe, block(width: text-w)[
   #text(weight: "bold", size: 28pt, top-edge: "cap-height")[Go und Waldorfpädagogik]
   #v(3mm)
-  #text(size: 13pt)[Bei Rudolf Steiner kommt Go – soweit bekannt – nicht vor. Aber vieles, was im Go geübt wird, berührt Kernanliegen der Waldorfpädagogik.]
+  #text(size: 14pt)[Go ist mehr als ein Denkspiel. Es wird mit den Händen gespielt, am Brett, von zwei Menschen, die sich gegenübersitzen – und es lebt davon, dass alle voneinander lernen.]
 
-  #set text(size: 12.5pt)
-  #block(height: 186mm, columns(2, gutter: 8mm)[
-    #h2[Vom Ganzen ausgehen]
-    Wer Go spielt, lernt zuerst auf das ganze Brett zu schauen und erst dann auf den einzelnen Kampf. Dieselbe Bewegung beschreibt Steiner für den Rechenunterricht:
-    #quote-box[„… die Summe ist zuerst ins Auge zu fassen, und die ist dann zu spalten in die einzelnen Addenden.“][Rudolf Steiner, GA 294, 1. Vortrag, 1919]
-    Beim Zerlegen, sagt er, sei man „in einer völlig freien inneren Tätigkeit“ (GA 301).
-
-    #h2[Denken mit den Händen]
-    Im Go wird jeder Gedanke zur Tat: Ein Stein wird gegriffen, gesetzt – und nicht mehr zurückgenommen. Denken und Wollen gehören zusammen.
+  #set text(size: 14pt)
+  #block(height: 190mm, columns(2, gutter: 8mm)[
+    #h2[Mit Händen und Augen]
+    Das Holzbrett, die glatten, kühlen Steine, das leise Klacken beim Setzen: Go ist ein sinnliches Spiel. Traditionell werden in Japan die weißen Steine aus Muschelschalen geschnitten, die schwarzen aus Schiefer. Auf dem Brett entstehen Formen, die Spieler:innen „gut“ oder „schwer“ nennen – Go schult das Gefühl für Gestalt ebenso wie das Rechnen. Und jeder Gedanke wird zur Tat: Ein gesetzter Stein wird nicht zurückgenommen.
     #quote-box[„… derjenige, der seine Finger ordentlich zu bewegen weiß, [hat] auch biegsame Gedanken und Ideen …“][Rudolf Steiner, GA 301, 5. Vortrag, 1920]
 
-    #h2[Spiel in vollem Ernst]
-    Steiner nannte Schillers „Briefe über die ästhetische Erziehung des Menschen“ eine der bedeutendsten pädagogischen Schriften (GA 294). Dort heißt es:
-    #quote-box[„… der Mensch spielt nur, wo er in voller Bedeutung des Worts Mensch ist, und er ist nur da ganz Mensch, wo er spielt.“][Friedrich Schiller, 15. Brief]
-    In China zählte Go zu den vier Künsten des Gebildeten – neben Musik, Kalligraphie und Malerei. Man nennt es auch 手談, „Gespräch mit den Händen“: zwei Menschen, die sich ohne Worte verstehen.
+    #h2[Spielen ohne Bildschirm]
+    Go braucht kein Gerät, keinen Strom und kein Konto – nur ein Brett, Steine und ein Gegenüber. In China nennt man Go auch #box[手談], „Gespräch mit den Händen“: Zwei Menschen verständigen sich Zug um Zug, ganz ohne Worte. Nach der Partie wird dann geredet: Man spielt sie gemeinsam nach und erzählt sich, was man gedacht hat.
 
-    #h2[Dem eigenen Denken zusehen]
-    Nach jeder Partie liegt das Denken beider Spieler als Spur auf dem Brett. Man spielt sie Zug für Zug nach, bespricht sie und beobachtet so das eigene Denken – für Steiner „eine Art Ausnahmezustand“:
-    #quote-box[„Wer das Denken beobachtet, lebt während der Beobachtung unmittelbar in einem geistigen, sich selbst tragenden Wesensweben darinnen.“][Rudolf Steiner, Die Philosophie der Freiheit, GA 4]
+    #h2[Alle lernen von allen]
+    In der AG lernen Neulinge von denen, die schon länger dabei sind. Wer die Regeln verstanden hat, erklärt sie dem nächsten Kind – und merkt dabei, wie viel er oder sie selbst gelernt hat. So wird man in der AG erst Schüler:in und mit der Zeit selbst Lehrer:in, ähnlich wie bei den Patenschaften, mit denen an vielen Waldorfschulen ältere Schüler:innen die Erstklässler begleiten.
 
-    #h2[Was im Kind veranlagt ist]
-    #quote-box[„Was ist im Menschen veranlagt und was kann in ihm entwickelt werden?“][Rudolf Steiner, „Freie Schule und Dreigliederung“, GA 24]
-    In der AG spielen alle miteinander. Die Go-Rätsel aber bekommt jedes Kind passend zu seiner Spielstärke – so findet auch, wer schon sehr weit ist, immer eine neue Herausforderung.
+    Dank Vorgabesteinen können dabei alle miteinander spielen: Kinder mit Erwachsenen, Anfänger:innen mit Erfahrenen. Und die Go-Rätsel bekommt jedes Kind passend zu seiner Spielstärke – auch wer schon sehr weit ist, findet immer eine neue Herausforderung.
 
+    #h2[Was nebenbei wächst]
+    Eine Partie beginnt mit einem Gruß und endet mit einem Dank. Dazwischen üben die Kinder Geduld und Konzentration, das Gewinnen ohne Triumph und das Verlieren, ohne den Mut zu verlieren – denn jede Niederlage zeigt, was man beim nächsten Mal anders machen kann.
   ])
 ])
 
