@@ -1,7 +1,7 @@
 {
   "dependencyDashboard": false,
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Renovate (Mend-App) öffnet nur noch Sicherheitsupdates (sofort) und montags früh einen gebündelten PR für neu gebaute Basis-Images (gleicher Tag, neuer Digest). Es merged selbst, sobald die Checks am PR grün sind (nur der Cloudflare-Pages-Build, keine Tests).",
+  "description": "Renovate (Mend-App) öffnet nur noch Sicherheitsupdates (sofort) und montags früh einen gebündelten PR für neu gebaute Basis-Images (gleicher Tag, neuer Digest). Es merged selbst, sobald die Checks am PR grün sind (nur der Cloudflare-Build, keine Tests).",
   "extends": [
     "config:recommended",
     ":disableDependencyDashboard",

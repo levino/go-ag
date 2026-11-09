@@ -7,13 +7,16 @@
     "dev": "astro dev",
     "install-typst": "test -x ./node_modules/.bin/typst || (curl -fsSL https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz -o /tmp/typst.tar.xz && tar -xf /tmp/typst.tar.xz -C /tmp/ && cp /tmp/typst-*/typst ./node_modules/.bin/)",
     "build": "npm run install-typst && astro build",
-    "preview": "wrangler pages dev build --d1 DB",
-    "check": "astro check && tsc -p functions"
+    "preview": "astro preview",
+    "check": "wrangler types && astro check",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "engines": {
     "node": ">=22.12"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.4.6",
     "@levino/shipyard-base": "^0.9.4",
     "@levino/shipyard-docs": "^0.9.4",
     "@tailwindcss/typography": "^0.5.20",
@@ -24,7 +27,6 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
-    "@cloudflare/workers-types": "^5.20261109.1",
     "@types/node": "^26.6.6",
     "typescript": "^6.0.3",
     "wrangler": "^4.158.0"

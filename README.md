@@ -17,48 +17,69 @@ npm run dev
 npm run build
 ```
 
-Erzeugt die statische Seite in `build/`. Vorher installiert `npm run build` das
-[Typst](https://typst.app/)-Binary, mit dem die Partieprotokolle (`kifu*.typ`) als PDF gebaut werden.
+Erzeugt den Worker in `dist/` (statische Seiten in `dist/client`, Worker in `dist/server`).
+Vorher installiert `npm run build` das [Typst](https://typst.app/)-Binary, mit dem die
+Partieprotokolle (`kifu*.typ`) als PDF gebaut werden.
 
-`npm run check` prüft die Typen von Seite und Pages Functions.
+`npm run check` erzeugt die Binding-Typen (`wrangler types`) und prüft alles mit `astro check`.
+
+Lokal im Worker-Runtime testen (mit lokaler D1-Datenbank):
+
+```bash
+npm run build && npm run preview
+```
 
 ## Inhalte
 
+- `src/pages/index.astro` – Startseite
 - `infos/` – Informationsseiten (Über die AG, Spielmaterial, Online-Go, Partieprotokoll)
 - `src/pages/zeit.astro` – Terminumfrage (Ziel des QR-Codes auf dem Flyer)
+- `src/pages/api/zeit.ts` – Umfrage-API, speichert in Cloudflare D1
 - `src/pages/impressum.md` – Impressum und Datenschutz
 - `src/pages/kifu/[file].ts` – baut die Partieprotokoll-PDFs aus `kifu*.typ`
 - `flyer/` – Werbeflyer (Typst), siehe `flyer/README.md`
 
-## Deployment
+## Deployment (Cloudflare Workers)
 
-Die Seite läuft auf **Cloudflare Pages** und wird bei jedem Push auf `main` gebaut.
+Die Seite läuft als Cloudflare Worker `go-ag` (Konfiguration in `wrangler.jsonc`). Alle Seiten
+werden beim Build vorgerendert, nur `/api/zeit` läuft zur Laufzeit.
 
-- Build command: `npm run build`
-- Build output directory: `build`
+### Einmalig einrichten
 
-### Terminumfrage (Cloudflare D1)
+1. **Datenbank in der EU anlegen** – *vor* dem ersten Deploy:
 
-Die Umfrage speichert ihre Stimmen über die Pages Function `functions/api/zeit.ts` in einer
-D1-Datenbank. Einmalig einrichten:
+   ```bash
+   npx wrangler d1 create go-ag --jurisdiction=eu
+   ```
 
-1. Cloudflare-Dashboard → *Storage & Databases* → *D1* → Datenbank anlegen (z. B. `go-ag`).
-2. Pages-Projekt `go-ag` → *Settings* → *Bindings* → *Add* → *D1 database*:
-   Variablenname `DB`, Datenbank `go-ag`. Für *Production* und *Preview* setzen.
-3. Neu deployen. Die Tabelle `stimmen` legt die Funktion beim ersten Aufruf selbst an.
+   Oder im Dashboard: *D1* → *Create Database*, Name `go-ag`, *Data location* →
+   *Specify jurisdiction* → *European Union*. Der Rechtsraum lässt sich später nicht ändern.
 
-Ohne Binding zeigt die Umfrageseite „Die Umfrage ist noch nicht eingerichtet“.
+   `wrangler.jsonc` nennt die Datenbank nur beim Namen; Wrangler bindet sie beim Deploy
+   automatisch. Gibt es sie noch nicht, legt Wrangler sie selbst an – dann aber ohne
+   EU-Vorgabe. Deshalb diesen Schritt zuerst.
 
-Auswerten im D1-Dashboard (*Console*):
+2. **Worker mit GitHub verbinden:** *Workers & Pages* → *Create* → *Import a repository* →
+   `levino/go-ag`. Build command `npm run build`, Deploy command `npx wrangler deploy`.
 
-```sql
-SELECT COUNT(*) AS stimmen, SUM(montag) AS montag, SUM(dienstag) AS dienstag FROM stimmen;
-```
+3. **Domain umziehen:** `go-ag.levinkeller.de` im alten Pages-Projekt entfernen und beim Worker
+   unter *Settings* → *Domains & Routes* als Custom Domain eintragen. Danach das Pages-Projekt
+   löschen.
 
-Lokal testen (mit lokaler D1-Datenbank):
+Die Tabelle `stimmen` legt die API beim ersten Aufruf selbst an.
+
+### Auswerten
+
+Im D1-Dashboard (*Console*) oder per Wrangler:
 
 ```bash
-npm run build && npm run preview
+npx wrangler d1 execute go-ag --remote --command "SELECT COUNT(*) AS stimmen, SUM(montag) AS montag, SUM(dienstag) AS dienstag FROM stimmen"
+```
+
+Sobald der Termin feststeht, die Stimmen löschen (so steht es im Impressum):
+
+```bash
+npx wrangler d1 execute go-ag --remote --command "DELETE FROM stimmen"
 ```
 
 ## Lizenz

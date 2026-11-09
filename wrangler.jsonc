@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "go-ag",
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  // Terminumfrage. Nur der Name, keine ID: Wrangler sucht die Datenbank beim Deploy
+  // über den Namen. Sie muss vorher mit Rechtsraum EU angelegt sein
+  // (`npx wrangler d1 create go-ag --jurisdiction=eu`), sonst legt Wrangler sie
+  // ohne Standortvorgabe selbst an. Siehe README.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "go-ag"
+    }
+  ],
+  "observability": { "enabled": true }
+}

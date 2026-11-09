@@ -23,3 +23,8 @@ yarn-error.log*
 .astro
 # Wrangler (lokale D1-Datenbank)
 .wrangler
+
+# Build-Ausgabe
+dist
+# Von `wrangler types` erzeugt (npm run check)
+worker-configuration.d.ts

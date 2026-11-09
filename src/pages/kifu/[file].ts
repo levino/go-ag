@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process'
-import { fileURLToPath } from 'node:url'
+import { resolve } from 'node:path'
 import type { APIRoute, GetStaticPaths } from 'astro'
 
 // Die Partieprotokolle werden beim Build aus den Typst-Quellen im Repo-Wurzelverzeichnis
@@ -13,7 +13,8 @@ export const getStaticPaths = (() =>
   }))) satisfies GetStaticPaths
 
 export const GET: APIRoute = ({ props }) => {
-  const source = fileURLToPath(new URL(`../../../${props.source}`, import.meta.url))
+  // Beim Build ist das Arbeitsverzeichnis die Repo-Wurzel, in der kifu*.typ liegen.
+  const source = resolve(process.cwd(), props.source)
   const pdf = execFileSync('typst', ['compile', source, '-'], {
     maxBuffer: 10 * 1024 * 1024,
   })

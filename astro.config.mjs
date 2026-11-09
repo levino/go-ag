@@ -1,20 +1,26 @@
+import cloudflare from '@astrojs/cloudflare'
 import shipyard from '@levino/shipyard-base'
 import shipyardDocs from '@levino/shipyard-docs'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
 import appCss from './src/styles/app.css?url'
 
-// Statische Seite für Cloudflare Pages. Das Einzige, was zur Laufzeit läuft,
-// ist die Umfrage-API in functions/api/zeit.ts (Pages Function mit D1).
+// Läuft als Cloudflare Worker (siehe wrangler.jsonc). Alle Seiten werden beim Build
+// vorgerendert; nur die Umfrage-API (src/pages/api/zeit.ts) läuft zur Laufzeit.
 export default defineConfig({
   site: 'https://go-ag.levinkeller.de',
-  // Cloudflare Pages erwartet die Ausgabe weiterhin in build/ (wie bei Docusaurus).
-  outDir: './build',
+  adapter: cloudflare({
+    // Die Kifu-PDFs werden beim Build mit dem typst-Binary erzeugt (node:child_process).
+    prerenderEnvironment: 'node',
+    // Keine Bildverarbeitung und keine Sessions nötig, also auch keine
+    // automatisch angelegten IMAGES- und SESSION-Bindings.
+    imageService: 'passthrough',
+  }),
+  session: false,
   vite: { plugins: [tailwindcss()] },
-  // Die Seite hat keine eigene Startseite: / und /infos zeigen auf „Über die Go-AG“.
-  // Alte Docusaurus-Adressen leiten auf die neuen um (Links von der Schul-Webseite).
+  // /infos zeigt auf „Über die Go-AG“. Alte Docusaurus-Adressen leiten auf die
+  // neuen um (Links von der Schul-Webseite).
   redirects: {
-    '/': '/infos/ueber-die-ag',
     '/infos': '/infos/ueber-die-ag',
     '/spielmaterial': '/infos/spielmaterial',
     '/online-go': '/infos/online-go',
