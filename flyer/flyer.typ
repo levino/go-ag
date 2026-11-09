@@ -6,8 +6,8 @@
 //   typst compile flyer/flyer.typ flyer/go-ag-flyer-a4.pdf
 //
 // Quellen:
-//   Steiner-Zitat: GA 301, 5. Vortrag, Basel 26.4.1920 (Rudolf Steiner Online Archiv,
-//     anthroposophie.byu.edu/files/2025/06/301.pdf)
+//   Steiner-Zitat: „Freie Schule und Dreigliederung“ (1919), GA 24, S. 37
+//     (Rudolf Steiner Online Archiv, anthroposophie.byu.edu/files/2025/06/s104.pdf)
 //   手談 als Beiname des Go: Shishuo xinyu; weiße Steine aus Hamaguri-Muschel, schwarze aus
 //     Nachiguro-Schiefer (ja.wikipedia „碁石“)
 //   Patenschaften an Waldorfschulen: Bund der Freien Waldorfschulen, waldorfschule.de
@@ -197,7 +197,6 @@
   #block(height: 190mm, columns(2, gutter: 8mm)[
     #h2[Mit Händen und Augen]
     Das Holzbrett, die glatten, kühlen Steine, das leise Klacken beim Setzen: Go ist ein sinnliches Spiel. Traditionell werden in Japan die weißen Steine aus Muschelschalen geschnitten, die schwarzen aus Schiefer. Auf dem Brett entstehen Formen, die Spieler:innen „gut“ oder „schwer“ nennen – Go schult das Gefühl für Gestalt ebenso wie das Rechnen. Und jeder Gedanke wird zur Tat: Ein gesetzter Stein wird nicht zurückgenommen.
-    #quote-box[„… derjenige, der seine Finger ordentlich zu bewegen weiß, [hat] auch biegsame Gedanken und Ideen …“][Rudolf Steiner, GA 301, 5. Vortrag, 1920]
 
     #h2[Spielen ohne Bildschirm]
     Go braucht kein Gerät, keinen Strom und kein Konto – nur ein Brett, Steine und ein Gegenüber. In China nennt man Go auch #box[手談], „Gespräch mit den Händen“: Zwei Menschen verständigen sich Zug um Zug, ganz ohne Worte. Nach der Partie wird dann geredet: Man spielt sie gemeinsam nach und erzählt sich, was man gedacht hat.
@@ -205,7 +204,8 @@
     #h2[Alle lernen von allen]
     In der AG lernen Neulinge von denen, die schon länger dabei sind. Wer die Regeln verstanden hat, erklärt sie dem nächsten Kind – und merkt dabei, wie viel er oder sie selbst gelernt hat. So wird man in der AG erst Schüler:in und mit der Zeit selbst Lehrer:in, ähnlich wie bei den Patenschaften, mit denen an vielen Waldorfschulen ältere Schüler:innen die Erstklässler begleiten.
 
-    Dank Vorgabesteinen können dabei alle miteinander spielen: Kinder mit Erwachsenen, Anfänger:innen mit Erfahrenen. Und die Go-Rätsel bekommt jedes Kind passend zu seiner Spielstärke – auch wer schon sehr weit ist, findet immer eine neue Herausforderung.
+    Dank Vorgabesteinen können dabei alle miteinander spielen: Kinder mit Erwachsenen, Anfänger:innen mit Erfahrenen. Die Go-Rätsel bekommt jedes Kind passend zu seiner Spielstärke – auch wer schon sehr weit ist, findet immer eine neue Herausforderung.
+    #quote-box[„Was gelehrt und erzogen werden soll, das soll nur aus der Erkenntnis des werdenden Menschen und seiner individuellen Anlagen entnommen sein.“][Rudolf Steiner, „Freie Schule und Dreigliederung“ (GA 24)]
 
     #h2[Was nebenbei wächst]
     Eine Partie beginnt mit einem Gruß und endet mit einem Dank. Dazwischen üben die Kinder Geduld und Konzentration, das Gewinnen ohne Triumph und das Verlieren, ohne den Mut zu verlieren – denn jede Niederlage zeigt, was man beim nächsten Mal anders machen kann.
