@@ -6,8 +6,8 @@
 - Seite 1 Vorderseite, Seite 2 Rückseite; alle Schriften eingebettet
 - Texte ≥ 12 mm vom Endformatrand
 
-Der QR-Code zeigt auf `https://go-ag.levinkeller.de/zeit`. Wohin das führt, steht in
-`static/_redirects` – dort die Umfrage-URL eintragen, dann muss der Flyer nicht neu gedruckt werden.
+Der QR-Code zeigt auf `https://go-ag.levinkeller.de/zeit`, die Terminumfrage der Webseite
+(`src/pages/zeit.astro`, gespeichert über `functions/api/zeit.ts` in Cloudflare D1).
 
 Neu erzeugen (Schriften Carlito und IPAGothic müssen installiert sein,
 Debian: `fonts-crosextra-carlito fonts-ipafont-gothic`):

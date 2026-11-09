@@ -18,3 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Astro
+.astro
+# Wrangler (lokale D1-Datenbank)
+.wrangler

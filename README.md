@@ -1,24 +1,15 @@
 # Go-AG Freie Waldorfschule Hannover Maschsee
 
-Webseite der Go-AG der FWS Hannover Maschsee.
+Webseite der Go-AG der FWS Hannover Maschsee: <https://go-ag.levinkeller.de>
 
-Diese Website wurde mit [Docusaurus](https://docusaurus.io/) erstellt, einem modernen Static-Site-Generator.
+Gebaut mit [Astro](https://astro.build/) und [shipyard](https://shipyard.levinkeller.de/).
 
-## Installation
+## Entwicklung
 
 ```bash
 npm install
+npm run dev
 ```
-
-## Lokale Entwicklung
-
-```bash
-npm start
-```
-
-Dieser Befehl startet einen lokalen Entwicklungsserver und öffnet ein Browserfenster. Die meisten Änderungen werden live übernommen, ohne den Server neu starten zu müssen.
-
-Die Seite ist dann unter `http://localhost:3000` erreichbar.
 
 ## Build
 
@@ -26,23 +17,50 @@ Die Seite ist dann unter `http://localhost:3000` erreichbar.
 npm run build
 ```
 
-Dieser Befehl generiert statische Inhalte im `build`-Verzeichnis, die von jedem Static-Hosting-Service bereitgestellt werden können.
+Erzeugt die statische Seite in `build/`. Vorher installiert `npm run build` das
+[Typst](https://typst.app/)-Binary, mit dem die Partieprotokolle (`kifu*.typ`) als PDF gebaut werden.
 
-## Deployment
-
-Die Seite wird auf **Cloudflare Pages** gehostet und automatisch bei jedem Push auf den Main-Branch deployed.
-
-**Build-Einstellungen:**
-- Build command: `npm run build`
-- Build output directory: `build`
-- Root directory: `/`
+`npm run check` prüft die Typen von Seite und Pages Functions.
 
 ## Inhalte
 
-- **Hauptseite** (`docs/intro.md`): Informationen zur Go-AG
-- **Spielmaterial** (`docs/spielmaterial.md`): Empfehlungen für Go-Spielmaterial
-- **Impressum** (`src/pages/impressum.md`): Rechtliche Informationen
+- `infos/` – Informationsseiten (Über die AG, Spielmaterial, Online-Go, Partieprotokoll)
+- `src/pages/zeit.astro` – Terminumfrage (Ziel des QR-Codes auf dem Flyer)
+- `src/pages/impressum.md` – Impressum und Datenschutz
+- `src/pages/kifu/[file].ts` – baut die Partieprotokoll-PDFs aus `kifu*.typ`
+- `flyer/` – Werbeflyer (Typst), siehe `flyer/README.md`
+
+## Deployment
+
+Die Seite läuft auf **Cloudflare Pages** und wird bei jedem Push auf `main` gebaut.
+
+- Build command: `npm run build`
+- Build output directory: `build`
+
+### Terminumfrage (Cloudflare D1)
+
+Die Umfrage speichert ihre Stimmen über die Pages Function `functions/api/zeit.ts` in einer
+D1-Datenbank. Einmalig einrichten:
+
+1. Cloudflare-Dashboard → *Storage & Databases* → *D1* → Datenbank anlegen (z. B. `go-ag`).
+2. Pages-Projekt `go-ag` → *Settings* → *Bindings* → *Add* → *D1 database*:
+   Variablenname `DB`, Datenbank `go-ag`. Für *Production* und *Preview* setzen.
+3. Neu deployen. Die Tabelle `stimmen` legt die Funktion beim ersten Aufruf selbst an.
+
+Ohne Binding zeigt die Umfrageseite „Die Umfrage ist noch nicht eingerichtet“.
+
+Auswerten im D1-Dashboard (*Console*):
+
+```sql
+SELECT COUNT(*) AS stimmen, SUM(montag) AS montag, SUM(dienstag) AS dienstag FROM stimmen;
+```
+
+Lokal testen (mit lokaler D1-Datenbank):
+
+```bash
+npm run build && npm run preview
+```
 
 ## Lizenz
 
-Siehe [LICENSE](LICENSE) Datei.
+Siehe [LICENSE](LICENSE).

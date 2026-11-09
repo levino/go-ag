@@ -1,0 +1,139 @@
+---
+import { Page } from '@levino/shipyard-base/layouts'
+
+const klassen = [
+  ...Array.from({ length: 13 }, (_, i) => ({ value: `${i + 1}`, label: `${i + 1}. Klasse` })),
+  { value: 'eltern', label: 'Elternteil' },
+  { value: 'lehrkraft', label: 'Lehrer:in / Mitarbeiter:in' },
+]
+---
+
+<Page
+  title="Terminumfrage"
+  description="Montag oder Dienstag? Stimm ab, wann die Go-AG künftig stattfinden soll."
+>
+  <div class="mx-auto max-w-2xl px-4 py-8">
+    <h1 class="text-4xl font-bold">Wann hast du Zeit?</h1>
+    <p class="mt-4 text-lg">
+      Die Go-AG zieht um: Statt mittwochs soll sie künftig <strong>montags oder dienstags von
+      14 bis 16 Uhr</strong> in der Schulbibliothek stattfinden. Kreuz an, welcher Tag dir passt
+      – gern auch beide.
+    </p>
+
+    <zeit-umfrage class="mt-8 block">
+      <div data-meldung role="status" class="alert hidden"></div>
+
+      <form method="post" action="/api/zeit" class="card bg-base-200 mt-4">
+        <div class="card-body gap-6">
+          <fieldset class="fieldset min-w-0">
+            <legend class="fieldset-legend text-lg">Welche Tage passen dir?</legend>
+            <label class="label text-lg text-base-content">
+              <input type="checkbox" name="tag" value="montag" class="checkbox checkbox-primary" />
+              Montag, 14–16 Uhr
+            </label>
+            <label class="label text-lg text-base-content">
+              <input type="checkbox" name="tag" value="dienstag" class="checkbox checkbox-primary" />
+              Dienstag, 14–16 Uhr
+            </label>
+          </fieldset>
+
+          <fieldset class="fieldset min-w-0">
+            <legend class="fieldset-legend text-lg">In welche Klasse gehst du?</legend>
+            <select name="klasse" required class="select select-lg w-full">
+              <option value="" disabled selected>Bitte wählen</option>
+              {klassen.map(({ value, label }) => <option value={value}>{label}</option>)}
+            </select>
+          </fieldset>
+
+          <fieldset class="fieldset min-w-0">
+            <legend class="fieldset-legend text-lg">Dein Vorname (freiwillig)</legend>
+            <input type="text" name="vorname" maxlength="40" autocomplete="given-name" class="input input-lg w-full" />
+            <p class="text-sm opacity-70">Hilft uns, doppelte Stimmen zu erkennen. Du kannst das Feld leer lassen.</p>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary btn-lg">Abstimmen</button>
+        </div>
+      </form>
+
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Bisheriger Stand</h2>
+        <p data-stand class="mt-2 text-lg">Wird geladen …</p>
+      </section>
+    </zeit-umfrage>
+
+    <p class="mt-8 text-sm opacity-80">
+      Wir speichern nur Klasse, angekreuzte Tage und – falls angegeben – den Vornamen, und zwar
+      ausschließlich, um einen Termin zu finden. Sobald der Termin feststeht, werden die Angaben
+      gelöscht. Mehr im <a class="link" href="/impressum">Impressum</a>.
+    </p>
+  </div>
+</Page>
+
+<script>
+  interface Stand {
+    stimmen: number
+    montag: number
+    dienstag: number
+  }
+
+  const standText = ({ stimmen, montag, dienstag }: Stand) =>
+    stimmen === 0
+      ? 'Noch keine Stimmen – sei die oder der Erste!'
+      : `${stimmen} ${stimmen === 1 ? 'Stimme' : 'Stimmen'}: Montag passt ${montag}, Dienstag passt ${dienstag}.`
+
+  class ZeitUmfrage extends HTMLElement {
+    private form = this.querySelector('form')
+    private meldung = this.querySelector<HTMLElement>('[data-meldung]')
+    private stand = this.querySelector<HTMLElement>('[data-stand]')
+
+    connectedCallback() {
+      const params = new URLSearchParams(window.location.search)
+      if (params.has('danke')) this.zeige('Danke! Deine Stimme ist gezählt.', 'alert-success')
+      if (params.has('fehler')) this.zeige(params.get('fehler') ?? '', 'alert-error')
+
+      this.form?.addEventListener('submit', (event) => {
+        event.preventDefault()
+        void this.abstimmen()
+      })
+      void this.ladeStand()
+    }
+
+    private zeige(text: string, art: 'alert-success' | 'alert-error') {
+      if (!this.meldung) return
+      this.meldung.textContent = text
+      this.meldung.classList.remove('hidden', 'alert-success', 'alert-error')
+      this.meldung.classList.add(art)
+    }
+
+    private async ladeStand() {
+      const antwort = await fetch('/api/zeit', { headers: { Accept: 'application/json' } }).catch(() => null)
+      const daten = antwort?.ok ? ((await antwort.json()) as Stand) : null
+      if (this.stand) {
+        this.stand.textContent = daten ? standText(daten) : 'Der Stand kann gerade nicht geladen werden.'
+      }
+    }
+
+    private async abstimmen() {
+      if (!this.form) return
+      const antwort = await fetch('/api/zeit', {
+        method: 'POST',
+        body: new FormData(this.form),
+        headers: { Accept: 'application/json' },
+      }).catch(() => null)
+      if (!antwort) {
+        this.zeige('Keine Verbindung. Bitte versuch es gleich noch einmal.', 'alert-error')
+        return
+      }
+      const daten = (await antwort.json()) as Stand & { fehler?: string }
+      if (!antwort.ok) {
+        this.zeige(daten.fehler ?? 'Das hat nicht geklappt.', 'alert-error')
+        return
+      }
+      this.form.reset()
+      this.zeige('Danke! Deine Stimme ist gezählt.', 'alert-success')
+      if (this.stand) this.stand.textContent = standText(daten)
+    }
+  }
+
+  customElements.define('zeit-umfrage', ZeitUmfrage)
+</script>

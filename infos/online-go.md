@@ -1,5 +1,8 @@
 ---
-sidebar_position: 3
+title: Online Go spielen
+description: "Online-Go als Ergänzung zur AG: Empfehlungen und Hinweise"
+sidebar:
+  position: 3
 ---
 
 # Online Go spielen

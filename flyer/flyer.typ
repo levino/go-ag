@@ -16,7 +16,7 @@
 
 // --- Inhalt, der sich ändern kann ---------------------------------------------
 
-// Kurz-URL auf der AG-Webseite; leitet per static/_redirects auf die Umfrage weiter.
+// Terminumfrage auf der AG-Webseite (src/pages/zeit.astro).
 #let survey-url = "https://go-ag.levinkeller.de/zeit"
 #let survey-url-short = "go-ag.levinkeller.de/zeit"
 #let website = "go-ag.levinkeller.de"

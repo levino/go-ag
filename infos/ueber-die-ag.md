@@ -1,23 +1,27 @@
 ---
-sidebar_position: 1
-slug: /
+title: Über die Go-AG
+description: "Go-AG an der Freien Waldorfschule Hannover-Maschsee: Zeit, Ort, Kosten und Ablauf"
+sidebar:
+  position: 1
 ---
 
 # Go-AG an der Freien Waldorfschule Hannover Maschsee
 
 Willkommen bei der Go-AG! Hier lernen wir das faszinierende Brettspiel Go (in China: Wéiqí, in Korea: Baduk).
 
-:::warning Wichtiger Hinweis
+<div role="note" class="alert alert-warning alert-soft block not-prose space-y-3 text-base-content">
+
+<p class="font-bold">Wichtiger Hinweis</p>
 
 **Dies ist eine AG, kein Betreuungsangebot!**
 
 Die AG ist offiziell mit der Schule abgestimmt und Levin Keller erfüllt die gesetzlichen Anforderungen, die AG anbieten zu dürfen. Es kann jedoch keine Garantie abgegeben werden, dass die AG stattfindet. Falls Levin Keller verhindert oder erkrankt ist, fällt die AG aus und die Kinder müssen anderweitig (von den Eltern) betreut werden.
 
-:::
+</div>
 
 ## Zeit und Ort
 
-- **Wann:** Mittwochs, 14:00 - 16:00 Uhr
+- **Wann:** Die AG zieht vom Mittwoch auf **Montag oder Dienstag, 14:00–16:00 Uhr** um. Welcher Tag es wird, entscheidet die [Terminumfrage](/zeit).
 - **Wo:** Schulbibliothek, Freie Waldorfschule Hannover Maschsee
 
 ## Für wen ist die AG?
@@ -84,7 +88,7 @@ Es gibt einen Mailverteiler für aktuelle Informationen oder kurzfristige Absage
 
 ### Spielmaterial für Zuhause
 
-Wenn Dein Kind Go auch zuhause spielen möchte, findest Du Empfehlungen auf der [Spielmaterial-Seite](./spielmaterial.md).
+Wenn Dein Kind Go auch zuhause spielen möchte, findest Du Empfehlungen auf der [Spielmaterial-Seite](/infos/spielmaterial).
 
 **Wichtig:** Zu bedenken ist, dass die Kinder auch jemanden zum Spielen brauchen, der die Regeln versteht. Früher oder später können die Kinder aber auch selbst die Regeln erklären – das lernen sie in der Go-AG!
 
@@ -92,7 +96,7 @@ Wenn Dein Kind Go auch zuhause spielen möchte, findest Du Empfehlungen auf der 
 
 Für ältere Kinder, die ihre Spielstärke verbessern möchten, kann Online-Go eine sinnvolle Ergänzung sein. Wir haben dazu eine eigene Seite mit Informationen und Empfehlungen erstellt:
 
-**[Mehr zu Online-Go →](./online-go.md)**
+**[Mehr zu Online-Go →](/infos/online-go)**
 
 ## Ausflüge
 

@@ -1,5 +1,8 @@
 ---
-sidebar_position: 2
+title: Spielmaterial
+description: "Empfehlungen für Go-Spielmaterial für zuhause"
+sidebar:
+  position: 2
 ---
 
 # Spielmaterial
@@ -51,13 +54,15 @@ Am Anfang braucht man **nur ein 9×9 Brett**. Auf kleineren Brettern lernt man d
 
 ## Wichtiger Hinweis für Eltern
 
-:::tip Mitspieler nötig
+<div role="note" class="alert alert-info alert-soft block not-prose space-y-3 text-base-content">
+
+<p class="font-bold">Mitspieler nötig</p>
 
 Zu bedenken ist, dass die Kinder auch **jemanden zum Spielen brauchen, der die Regeln versteht**.
 
 Früher oder später können die Kinder aber auch **selbst die Regeln erklären** – das lernen sie in der Go-AG!
 
-:::
+</div>
 
 ## Warum verschiedene Brettgrößen?
 
