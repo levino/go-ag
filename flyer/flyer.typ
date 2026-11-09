@@ -121,9 +121,9 @@
 ])
 
 #at(edge, bleed + 46mm, block(width: text-w)[
-  #text(size: 20pt, weight: "bold")[Eines der ältesten Strategiespiele der Welt – \ für Kinder, die gern tief nachdenken.]
+  #text(size: 20pt, weight: "bold")[Eines der ältesten Strategiespiele der Welt – \ für dich, wenn du gern tief nachdenkst.]
   #v(3mm)
-  #text(size: 14pt)[Go stammt aus China, ist über 2500 Jahre alt und wird bis heute in ganz Ostasien gespielt (Weiqi, Baduk). Die Regeln lernt man in fünf Minuten – und hat danach ein Leben lang zu entdecken.]
+  #text(size: 14pt)[Go stammt aus China, ist über 2500 Jahre alt und wird bis heute in ganz Ostasien gespielt (Weiqi, Baduk). Die Regeln lernst du in fünf Minuten – und hast danach ein Leben lang zu entdecken.]
 
   #set text(size: 14pt)
   #grid(
@@ -131,36 +131,36 @@
     column-gutter: 9mm,
     row-gutter: 5mm,
     [
-      #h2[Für wen ist Go?]
-      Für Kinder, die …
-      - stundenlang an einer Sache tüfteln können,
-      - Zahlen, Muster und Rätsel lieben,
-      - immer noch eine Frage mehr haben,
-      - beim Rechnen oder Schach längst mehr wollen,
-      - lieber selbst denken als vorgesagt bekommen,
-      - es mögen, still und konzentriert zu arbeiten.
+      #h2[Ist Go etwas für dich?]
+      Bestimmt, wenn du …
+      - stundenlang an einer Sache tüfteln kannst,
+      - Zahlen, Muster und Rätsel liebst,
+      - immer noch eine Frage mehr hast,
+      - beim Rechnen oder Schach längst mehr willst,
+      - lieber selbst denkst, als dir etwas vorsagen zu lassen,
+      - gern still und konzentriert arbeitest.
       #v(0.4em)
-      Die AG ist *offen für alle Klassen* – und genauso für Eltern, Lehrer:innen und Mitarbeiter:innen. Wer schon Go spielt, ist herzlich willkommen!
+      Die AG ist *offen für alle Klassen* – bring gern auch deine Eltern mit! Lehrer:innen und Mitarbeiter:innen sind ebenso willkommen. Und wenn du schon Go spielst: Komm vorbei und hilf mit!
     ],
     [
       #h2[Warum gerade Go?]
-      - *Kein Glück, nichts Verborgenes:* Alles liegt offen auf dem Brett. Es zählt nur das eigene Denken.
+      - *Kein Glück, nichts Verborgenes:* Alles liegt offen auf dem Brett. Es zählt nur dein eigenes Denken.
       - *Unerschöpflich:* Es gibt rund 2 · 10#super[170] mögliche Stellungen – unvorstellbar viel mehr, als das Universum Atome hat.
       - *Echte Mathematik:* Die Mathematiker Berlekamp und Wolfe haben für das Go-Endspiel eine eigene Theorie entwickelt.
-      - *Fair zwischen Jung und Alt:* Durch Vorgabesteine können Kinder ernsthaft gegen Erwachsene spielen – und gewinnen.
+      - *Fair zwischen Jung und Alt:* Mit Vorgabesteinen kannst du ernsthaft gegen Erwachsene spielen – und gewinnen.
       - *Ohne Bildschirm:* Holzbrett, Steine, ein Gegenüber.
     ],
     [
       #h2[So einfach geht Go]
       - Schwarz und Weiß setzen abwechselnd einen Stein auf die Kreuzungspunkte.
-      - Wer Steine des Gegners ganz umzingelt, nimmt sie vom Brett.
+      - Umzingelst du Steine deines Gegenübers ganz, nimmst du sie vom Brett.
       - Am Ende gewinnt, wer mehr Gebiet eingegrenzt hat.
     ],
     [
       #h2[So läuft die AG]
       - Im Mittelpunkt steht das *Spielen* miteinander.
-      - Neulinge lernen die Regeln vor Ort – Einstieg jederzeit.
-      - Bretter und Steine sind da.
+      - Die Regeln lernst du vor Ort – du kannst jederzeit einsteigen.
+      - Bretter und Steine sind da, du musst nichts mitbringen.
       - Später: Ausflüge, z.~B. zum Messeturnier in Hannover.
     ],
   )
@@ -176,7 +176,7 @@
     #set text(fill: white)
     #text(weight: "bold", size: 30pt)[Wann hast du Zeit?]
     #v(2mm)
-    #par(leading: 0.5em, text(size: 15pt)[Wir suchen einen AG-Termin, der möglichst vielen passt. Code scannen und ankreuzen, wann du kannst – dauert nur eine Minute!])
+    #par(leading: 0.5em, text(size: 15pt)[Die AG soll künftig *montags oder dienstags von 14 bis 16 Uhr* stattfinden. Scann den Code und kreuz an, welcher Tag dir passt – dauert nur eine Minute!])
     #v(4mm)
     #text(weight: "bold", size: 14pt, survey-url-short)
   ])
@@ -191,24 +191,24 @@
 #at(edge, bleed + safe, block(width: text-w)[
   #text(weight: "bold", size: 28pt, top-edge: "cap-height")[Go und Waldorfpädagogik]
   #v(3mm)
-  #text(size: 14pt)[Go ist mehr als ein Denkspiel. Es wird mit den Händen gespielt, am Brett, von zwei Menschen, die sich gegenübersitzen – und es lebt davon, dass alle voneinander lernen.]
+  #text(size: 14pt)[Go ist mehr als ein Denkspiel. Du spielst es mit den Händen, am Brett, mit jemandem, der dir gegenübersitzt – und alle lernen voneinander.]
 
   #set text(size: 14pt)
   #block(height: 190mm, columns(2, gutter: 8mm)[
     #h2[Mit Händen und Augen]
-    Das Holzbrett, die glatten, kühlen Steine, das leise Klacken beim Setzen: Go ist ein sinnliches Spiel. Traditionell werden in Japan die weißen Steine aus Muschelschalen geschnitten, die schwarzen aus Schiefer. Auf dem Brett entstehen Formen: Gruppen von Steinen leben oder sterben, manche Formen sind stark und schön, andere plump. Go schult das Gefühl für Gestalt ebenso wie das Rechnen. Und jeder Gedanke wird zur Tat: Ein gesetzter Stein wird nicht zurückgenommen.
+    Das Holzbrett, die glatten, kühlen Steine, das leise Klacken, wenn du einen Stein setzt: Go ist ein sinnliches Spiel. Traditionell werden in Japan die weißen Steine aus Muschelschalen geschnitten, die schwarzen aus Schiefer. Auf dem Brett entstehen Formen: Gruppen von Steinen leben oder sterben, manche Formen sind stark und schön, andere plump. Go schult dein Gefühl für Gestalt ebenso wie das Rechnen. Und jeder Gedanke wird zur Tat: Einen gesetzten Stein nimmst du nicht zurück.
 
     #h2[Spielen ohne Bildschirm]
-    Go braucht kein Gerät, keinen Strom und kein Konto – nur ein Brett, Steine und ein Gegenüber. In China nennt man Go auch #box[手談], „Gespräch mit den Händen“: Zwei Menschen verständigen sich Zug um Zug, ganz ohne Worte. Nach der Partie wird dann geredet: Man spielt sie gemeinsam nach und erzählt sich, was man gedacht hat.
+    Für Go brauchst du kein Gerät, keinen Strom und kein Konto – nur ein Brett, Steine und ein Gegenüber. In China nennt man Go auch #box[手談], „Gespräch mit den Händen“: Zwei Menschen verständigen sich Zug um Zug, ganz ohne Worte. Nach der Partie wird dann geredet: Ihr spielt sie gemeinsam nach und erzählt euch, was ihr gedacht habt.
 
     #h2[Alle lernen von allen]
-    In der AG lernen Neulinge von denen, die schon länger dabei sind. Wer die Regeln verstanden hat, erklärt sie dem nächsten Kind – und merkt dabei, wie viel er oder sie selbst gelernt hat. So wird man in der AG erst Schüler:in und mit der Zeit selbst Lehrer:in, ähnlich wie bei den Patenschaften, mit denen an vielen Waldorfschulen ältere Schüler:innen die Erstklässler begleiten.
+    In der AG lernst du von denen, die schon länger dabei sind. Sobald du die Regeln verstanden hast, erklärst du sie dem nächsten Kind – und merkst dabei, wie viel du selbst schon gelernt hast. So bist du erst Schüler:in und mit der Zeit selbst Lehrer:in, ähnlich wie bei den Patenschaften, mit denen an vielen Waldorfschulen ältere Schüler:innen die Erstklässler begleiten.
 
-    Dank Vorgabesteinen können dabei alle miteinander spielen: Kinder mit Erwachsenen, Anfänger:innen mit Erfahrenen. Die Go-Rätsel bekommt jedes Kind passend zu seiner Spielstärke – auch wer schon sehr weit ist, findet immer eine neue Herausforderung.
+    Dank Vorgabesteinen kannst du mit allen spielen: mit Erwachsenen, mit Anfänger:innen, mit Erfahrenen. Und die Go-Rätsel bekommst du passend zu deiner Spielstärke – auch wenn du schon sehr weit bist, findest du immer eine neue Herausforderung.
     #quote-box[„Was gelehrt und erzogen werden soll, das soll nur aus der Erkenntnis des werdenden Menschen und seiner individuellen Anlagen entnommen sein.“][Rudolf Steiner, „Freie Schule und Dreigliederung“ (GA 24)]
 
     #h2[Was nebenbei wächst]
-    Eine Partie beginnt mit einem Gruß und endet mit einem Dank. Dazwischen üben die Kinder Geduld und Konzentration, das Gewinnen ohne Triumph und das Verlieren, ohne den Mut zu verlieren – denn jede Niederlage zeigt, was man beim nächsten Mal anders machen kann.
+    Jede Partie beginnt mit einem Gruß und endet mit einem Dank. Dazwischen übst du Geduld und Konzentration, Gewinnen ohne Triumph und Verlieren, ohne den Mut zu verlieren – denn jede Niederlage zeigt dir, was du beim nächsten Mal anders machen kannst.
   ])
 ])
 
@@ -226,7 +226,7 @@
       [
         #text(weight: "bold", size: 15pt)[Gut zu wissen]
         #v(1.5mm)
-        *Neuer Termin:* montags, dienstags oder freitags in der Schulbibliothek – welcher Tag es wird, entscheidet die Umfrage. \
+        *Neuer Termin:* montags oder dienstags, 14–16 Uhr in der Schulbibliothek – welcher Tag es wird, entscheidet die Umfrage. \
         *Kostenlos*; bei fester Anmeldung 10~€ Startbeitrag, gelegentlich Kopiergeld für Rätsel.
       ],
       [
