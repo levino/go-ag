@@ -1,24 +1,15 @@
 # Go-AG Freie Waldorfschule Hannover Maschsee
 
-Webseite der Go-AG der FWS Hannover Maschsee.
+Webseite der Go-AG der FWS Hannover Maschsee: <https://go-ag.levinkeller.de>
 
-Diese Website wurde mit [Docusaurus](https://docusaurus.io/) erstellt, einem modernen Static-Site-Generator.
+Gebaut mit [Astro](https://astro.build/) und [shipyard](https://shipyard.levinkeller.de/).
 
-## Installation
+## Entwicklung
 
 ```bash
 npm install
+npm run dev
 ```
-
-## Lokale Entwicklung
-
-```bash
-npm start
-```
-
-Dieser Befehl startet einen lokalen Entwicklungsserver und öffnet ein Browserfenster. Die meisten Änderungen werden live übernommen, ohne den Server neu starten zu müssen.
-
-Die Seite ist dann unter `http://localhost:3000` erreichbar.
 
 ## Build
 
@@ -26,23 +17,62 @@ Die Seite ist dann unter `http://localhost:3000` erreichbar.
 npm run build
 ```
 
-Dieser Befehl generiert statische Inhalte im `build`-Verzeichnis, die von jedem Static-Hosting-Service bereitgestellt werden können.
+Erzeugt den Worker in `dist/` (statische Seiten in `dist/client`, Worker in `dist/server`).
+Vorher installiert `npm run build` das [Typst](https://typst.app/)-Binary, mit dem die
+Partieprotokolle (`kifu*.typ`) als PDF gebaut werden.
 
-## Deployment
+`npm run check` erzeugt die Binding-Typen (`wrangler types`) und prüft alles mit `astro check`.
 
-Die Seite wird auf **Cloudflare Pages** gehostet und automatisch bei jedem Push auf den Main-Branch deployed.
+Lokal im Worker-Runtime testen (mit lokaler D1-Datenbank):
 
-**Build-Einstellungen:**
-- Build command: `npm run build`
-- Build output directory: `build`
-- Root directory: `/`
+```bash
+npm run build && npm run preview
+```
 
 ## Inhalte
 
-- **Hauptseite** (`docs/intro.md`): Informationen zur Go-AG
-- **Spielmaterial** (`docs/spielmaterial.md`): Empfehlungen für Go-Spielmaterial
-- **Impressum** (`src/pages/impressum.md`): Rechtliche Informationen
+- `src/pages/index.astro` – Startseite
+- `infos/` – Informationsseiten (Über die AG, Spielmaterial, Online-Go, Partieprotokoll)
+- `src/pages/zeit.astro` – Terminumfrage (Ziel des QR-Codes auf dem Flyer)
+- `src/pages/api/zeit.ts` – Umfrage-API, speichert in Cloudflare D1
+- `src/pages/impressum.md` – Impressum und Datenschutz
+- `src/pages/kifu/[file].ts` – baut die Partieprotokoll-PDFs aus `kifu*.typ`
+- `flyer/` – Werbeflyer (Typst), siehe `flyer/README.md`
+
+## Deployment (Cloudflare Workers)
+
+Die Seite läuft als Cloudflare Worker `go-ag` (Konfiguration in `wrangler.jsonc`). Alle Seiten
+werden beim Build vorgerendert, nur `/api/zeit` läuft zur Laufzeit.
+
+### Einmalig einrichten
+
+1. **Datenbank:** `go-ag` existiert bereits (Rechtsraum EU) und ist in `wrangler.jsonc` per ID
+   gebunden. Für eine neue Datenbank: `npx wrangler d1 create <name> --jurisdiction=eu`
+   und die ID in `wrangler.jsonc` eintragen. Der Rechtsraum lässt sich später nicht ändern.
+
+2. **Worker mit GitHub verbinden:** *Workers & Pages* → *Create* → *Import a repository* →
+   `levino/go-ag`. Build command `npm run build`, Deploy command `npx wrangler deploy`.
+
+3. **Domain umziehen:** `go-ag.levinkeller.de` im alten Pages-Projekt entfernen und beim Worker
+   unter *Settings* → *Domains & Routes* als Custom Domain eintragen. Danach das Pages-Projekt
+   löschen.
+
+Die Tabelle `stimmen` legt die API beim ersten Aufruf selbst an.
+
+### Auswerten
+
+Im D1-Dashboard (*Console*) oder per Wrangler:
+
+```bash
+npx wrangler d1 execute go-ag --remote --command "SELECT COUNT(*) AS stimmen, SUM(montag) AS montag, SUM(dienstag) AS dienstag FROM stimmen"
+```
+
+Sobald der Termin feststeht, die Stimmen löschen (so steht es im Impressum):
+
+```bash
+npx wrangler d1 execute go-ag --remote --command "DELETE FROM stimmen"
+```
 
 ## Lizenz
 
-Siehe [LICENSE](LICENSE) Datei.
+Siehe [LICENSE](LICENSE).

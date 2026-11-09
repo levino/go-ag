@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "go-ag",
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  // Terminumfrage. Datenbank go-ag, angelegt mit Rechtsraum EU.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "go-ag",
+      "database_id": "df1ec5ad-624b-440c-9add-45485c8964a8"
+    }
+  ],
+  "observability": { "enabled": true }
+}
