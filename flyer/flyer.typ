@@ -196,7 +196,7 @@
   #set text(size: 14pt)
   #block(height: 190mm, columns(2, gutter: 8mm)[
     #h2[Mit Händen und Augen]
-    Das Holzbrett, die glatten, kühlen Steine, das leise Klacken beim Setzen: Go ist ein sinnliches Spiel. Traditionell werden in Japan die weißen Steine aus Muschelschalen geschnitten, die schwarzen aus Schiefer. Auf dem Brett entstehen Formen, die Spieler:innen „gut“ oder „schwer“ nennen – Go schult das Gefühl für Gestalt ebenso wie das Rechnen. Und jeder Gedanke wird zur Tat: Ein gesetzter Stein wird nicht zurückgenommen.
+    Das Holzbrett, die glatten, kühlen Steine, das leise Klacken beim Setzen: Go ist ein sinnliches Spiel. Traditionell werden in Japan die weißen Steine aus Muschelschalen geschnitten, die schwarzen aus Schiefer. Auf dem Brett entstehen Formen: Gruppen von Steinen leben oder sterben, manche Formen sind stark und schön, andere plump. Go schult das Gefühl für Gestalt ebenso wie das Rechnen. Und jeder Gedanke wird zur Tat: Ein gesetzter Stein wird nicht zurückgenommen.
 
     #h2[Spielen ohne Bildschirm]
     Go braucht kein Gerät, keinen Strom und kein Konto – nur ein Brett, Steine und ein Gegenüber. In China nennt man Go auch #box[手談], „Gespräch mit den Händen“: Zwei Menschen verständigen sich Zug um Zug, ganz ohne Worte. Nach der Partie wird dann geredet: Man spielt sie gemeinsam nach und erzählt sich, was man gedacht hat.
