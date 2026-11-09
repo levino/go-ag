@@ -226,7 +226,7 @@
       [
         #text(weight: "bold", size: 15pt)[Gut zu wissen]
         #v(1.5mm)
-        Bisher mittwochs, 14–16 Uhr in der Schulbibliothek – der neue Termin richtet sich nach der Umfrage. \
+        *Neuer Termin:* montags, dienstags oder freitags in der Schulbibliothek – welcher Tag es wird, entscheidet die Umfrage. \
         *Kostenlos*; bei fester Anmeldung 10~€ Startbeitrag, gelegentlich Kopiergeld für Rätsel.
       ],
       [
