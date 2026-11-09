@@ -7,14 +7,12 @@
     "directory": "./dist",
     "binding": "ASSETS"
   },
-  // Terminumfrage. Nur der Name, keine ID: Wrangler sucht die Datenbank beim Deploy
-  // über den Namen. Sie muss vorher mit Rechtsraum EU angelegt sein
-  // (`npx wrangler d1 create go-ag --jurisdiction=eu`), sonst legt Wrangler sie
-  // ohne Standortvorgabe selbst an. Siehe README.
+  // Terminumfrage. Datenbank go-ag, angelegt mit Rechtsraum EU.
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "go-ag"
+      "database_name": "go-ag",
+      "database_id": "df1ec5ad-624b-440c-9add-45485c8964a8"
     }
   ],
   "observability": { "enabled": true }

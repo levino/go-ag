@@ -46,18 +46,9 @@ werden beim Build vorgerendert, nur `/api/zeit` läuft zur Laufzeit.
 
 ### Einmalig einrichten
 
-1. **Datenbank in der EU anlegen** – *vor* dem ersten Deploy:
-
-   ```bash
-   npx wrangler d1 create go-ag --jurisdiction=eu
-   ```
-
-   Oder im Dashboard: *D1* → *Create Database*, Name `go-ag`, *Data location* →
-   *Specify jurisdiction* → *European Union*. Der Rechtsraum lässt sich später nicht ändern.
-
-   `wrangler.jsonc` nennt die Datenbank nur beim Namen; Wrangler bindet sie beim Deploy
-   automatisch. Gibt es sie noch nicht, legt Wrangler sie selbst an – dann aber ohne
-   EU-Vorgabe. Deshalb diesen Schritt zuerst.
+1. **Datenbank:** `go-ag` existiert bereits (Rechtsraum EU) und ist in `wrangler.jsonc` per ID
+   gebunden. Für eine neue Datenbank: `npx wrangler d1 create <name> --jurisdiction=eu`
+   und die ID in `wrangler.jsonc` eintragen. Der Rechtsraum lässt sich später nicht ändern.
 
 2. **Worker mit GitHub verbinden:** *Workers & Pages* → *Create* → *Import a repository* →
    `levino/go-ag`. Build command `npm run build`, Deploy command `npx wrangler deploy`.
