@@ -159,9 +159,10 @@
     [
       #h2[So läuft die AG]
       - Im Mittelpunkt steht das *Spielen* miteinander.
-      - Die Regeln lernst du vor Ort – du kannst jederzeit einsteigen.
-      - Bretter und Steine sind da, du musst nichts mitbringen.
-      - Später: Ausflüge, z.~B. zum Messeturnier in Hannover.
+      - Die Regeln lernst du vor Ort, Einstieg jederzeit.
+      - Regelmäßig unterrichtet ein Lehrer vom Go-Verein Hannover.
+      - Bretter und Steine sind da.
+      - Später: Ausflüge, z.~B. zum Messeturnier.
     ],
   )
 ])
@@ -176,7 +177,7 @@
     #set text(fill: white)
     #text(weight: "bold", size: 30pt)[Wann hast du Zeit?]
     #v(2mm)
-    #par(leading: 0.5em, text(size: 15pt)[Die AG soll künftig *montags oder dienstags von 14 bis 16 Uhr* stattfinden. Scann den Code und kreuz an, welcher Tag dir passt – dauert nur eine Minute!])
+    #par(leading: 0.5em, text(size: 15pt)[Die AG soll künftig *montags, dienstags oder freitags von 14 bis 16 Uhr* stattfinden. Scann den Code und kreuz an, welche Tage dir passen – dauert nur eine Minute!])
     #v(4mm)
     #text(weight: "bold", size: 14pt, survey-url-short)
   ])
@@ -226,7 +227,7 @@
       [
         #text(weight: "bold", size: 15pt)[Gut zu wissen]
         #v(1.5mm)
-        *Neuer Termin:* montags oder dienstags, 14–16 Uhr in der Schulbibliothek – welcher Tag es wird, entscheidet die Umfrage. \
+        *Neuer Termin:* montags, dienstags oder freitags, 14–16 Uhr in der Schulbibliothek – welcher Tag es wird, entscheidet die Umfrage. \
         *Kostenlos*; bei fester Anmeldung 10~€ Startbeitrag, gelegentlich Kopiergeld für Rätsel.
       ],
       [

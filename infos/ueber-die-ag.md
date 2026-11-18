@@ -21,7 +21,7 @@ Die AG ist offiziell mit der Schule abgestimmt und Levin Keller erfüllt die ges
 
 ## Zeit und Ort
 
-- **Wann:** Die AG zieht vom Mittwoch auf **Montag oder Dienstag, 14:00–16:00 Uhr** um. Welcher Tag es wird, entscheidet die [Terminumfrage](/zeit).
+- **Wann:** Die AG zieht vom Mittwoch auf **Montag, Dienstag oder Freitag, 14:00–16:00 Uhr** um. Welcher Tag es wird, entscheidet die [Terminumfrage](/zeit).
 - **Wo:** Schulbibliothek, Freie Waldorfschule Hannover Maschsee
 
 ## Für wen ist die AG?
@@ -37,6 +37,8 @@ Eingeladen sind:
 ## Leitung
 
 Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relativ schwach für einen Go-Lehrer, sollte aber für die Inhalte der AG ausreichen.
+
+Regelmäßig kommt außerdem ein Lehrer vom Go-Verein Hannover dazu und unterrichtet die Kinder.
 
 ## Kosten
 

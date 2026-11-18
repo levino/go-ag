@@ -10,14 +10,14 @@ const klassen = [
 
 <Page
   title="Terminumfrage"
-  description="Montag oder Dienstag? Stimm ab, wann die Go-AG künftig stattfinden soll."
+  description="Montag, Dienstag oder Freitag? Stimm ab, wann die Go-AG künftig stattfinden soll."
 >
   <div class="mx-auto max-w-2xl px-4 py-8">
     <h1 class="text-4xl font-bold">Wann hast du Zeit?</h1>
     <p class="mt-4 text-lg">
-      Die Go-AG zieht um: Statt mittwochs soll sie künftig <strong>montags oder dienstags von
-      14 bis 16 Uhr</strong> in der Schulbibliothek stattfinden. Kreuz an, welcher Tag dir passt
-      – gern auch beide.
+      Die Go-AG zieht um: Statt mittwochs soll sie künftig <strong>montags, dienstags oder
+      freitags von 14 bis 16 Uhr</strong> in der Schulbibliothek stattfinden. Kreuz an, welche Tage dir passen
+      – gern auch mehrere.
     </p>
 
     <zeit-umfrage class="mt-8 block">
@@ -34,6 +34,10 @@ const klassen = [
             <label class="label text-lg text-base-content">
               <input type="checkbox" name="tag" value="dienstag" class="checkbox checkbox-primary" />
               Dienstag, 14–16 Uhr
+            </label>
+            <label class="label text-lg text-base-content">
+              <input type="checkbox" name="tag" value="freitag" class="checkbox checkbox-primary" />
+              Freitag, 14–16 Uhr
             </label>
           </fieldset>
 
@@ -74,12 +78,13 @@ const klassen = [
     stimmen: number
     montag: number
     dienstag: number
+    freitag: number
   }
 
-  const standText = ({ stimmen, montag, dienstag }: Stand) =>
+  const standText = ({ stimmen, montag, dienstag, freitag }: Stand) =>
     stimmen === 0
       ? 'Noch keine Stimmen – sei die oder der Erste!'
-      : `${stimmen} ${stimmen === 1 ? 'Stimme' : 'Stimmen'}: Montag passt ${montag}, Dienstag passt ${dienstag}.`
+      : `${stimmen} ${stimmen === 1 ? 'Stimme' : 'Stimmen'}: Montag passt ${montag}, Dienstag ${dienstag}, Freitag ${freitag}.`
 
   class ZeitUmfrage extends HTMLElement {
     private form = this.querySelector('form')
