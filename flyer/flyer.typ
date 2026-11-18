@@ -159,9 +159,10 @@
     [
       #h2[So läuft die AG]
       - Im Mittelpunkt steht das *Spielen* miteinander.
-      - Die Regeln lernst du vor Ort – du kannst jederzeit einsteigen.
-      - Bretter und Steine sind da, du musst nichts mitbringen.
-      - Später: Ausflüge, z.~B. zum Messeturnier in Hannover.
+      - Die Regeln lernst du vor Ort, Einstieg jederzeit.
+      - Regelmäßig unterrichtet ein Lehrer vom Go-Verein Hannover.
+      - Bretter und Steine sind da.
+      - Später: Ausflüge, z.~B. zum Messeturnier.
     ],
   )
 ])
@@ -233,7 +234,7 @@
         #text(weight: "bold", size: 15pt, fill: cmyk(0%, 45%, 40%, 0%))[Wichtig für Eltern]
         #v(1.5mm)
         Die AG ist mit der Schule abgestimmt, aber *kein Betreuungsangebot*: Bei Krankheit fällt sie aus. Absagen kommen über den Mailverteiler. \
-        Leitung: Ralph Tiefenthaler und Levin Keller \
+        Leitung: Levin Keller \
         *#website*
       ],
       align(center)[

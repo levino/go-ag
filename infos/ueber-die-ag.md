@@ -38,6 +38,8 @@ Eingeladen sind:
 
 Die AG wird geleitet von **Levin Keller**, der etwa 8 Kyu spielt. Das ist relativ schwach für einen Go-Lehrer, sollte aber für die Inhalte der AG ausreichen.
 
+Regelmäßig kommt außerdem ein Lehrer vom Go-Verein Hannover dazu und unterrichtet die Kinder.
+
 ## Kosten
 
 Die Go-AG ist **grundsätzlich kostenlos**.
