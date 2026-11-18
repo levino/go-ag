@@ -176,7 +176,7 @@
     #set text(fill: white)
     #text(weight: "bold", size: 30pt)[Wann hast du Zeit?]
     #v(2mm)
-    #par(leading: 0.5em, text(size: 15pt)[Die AG soll künftig *montags oder dienstags von 14 bis 16 Uhr* stattfinden. Scann den Code und kreuz an, welcher Tag dir passt – dauert nur eine Minute!])
+    #par(leading: 0.5em, text(size: 15pt)[Die AG soll künftig *montags, dienstags oder freitags von 14 bis 16 Uhr* stattfinden. Scann den Code und kreuz an, welche Tage dir passen – dauert nur eine Minute!])
     #v(4mm)
     #text(weight: "bold", size: 14pt, survey-url-short)
   ])
@@ -226,14 +226,14 @@
       [
         #text(weight: "bold", size: 15pt)[Gut zu wissen]
         #v(1.5mm)
-        *Neuer Termin:* montags oder dienstags, 14–16 Uhr in der Schulbibliothek – welcher Tag es wird, entscheidet die Umfrage. \
+        *Neuer Termin:* montags, dienstags oder freitags, 14–16 Uhr in der Schulbibliothek – welcher Tag es wird, entscheidet die Umfrage. \
         *Kostenlos*; bei fester Anmeldung 10~€ Startbeitrag, gelegentlich Kopiergeld für Rätsel.
       ],
       [
         #text(weight: "bold", size: 15pt, fill: cmyk(0%, 45%, 40%, 0%))[Wichtig für Eltern]
         #v(1.5mm)
         Die AG ist mit der Schule abgestimmt, aber *kein Betreuungsangebot*: Bei Krankheit fällt sie aus. Absagen kommen über den Mailverteiler. \
-        Leitung: Levin Keller \
+        Leitung: Ralph Tiefenthaler und Levin Keller \
         *#website*
       ],
       align(center)[

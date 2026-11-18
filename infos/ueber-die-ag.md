@@ -21,7 +21,7 @@ Die AG ist offiziell mit der Schule abgestimmt und Levin Keller erfüllt die ges
 
 ## Zeit und Ort
 
-- **Wann:** Die AG zieht vom Mittwoch auf **Montag oder Dienstag, 14:00–16:00 Uhr** um. Welcher Tag es wird, entscheidet die [Terminumfrage](/zeit).
+- **Wann:** Die AG zieht vom Mittwoch auf **Montag, Dienstag oder Freitag, 14:00–16:00 Uhr** um. Welcher Tag es wird, entscheidet die [Terminumfrage](/zeit).
 - **Wo:** Schulbibliothek, Freie Waldorfschule Hannover Maschsee
 
 ## Für wen ist die AG?
